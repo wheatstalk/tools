@@ -18,7 +18,6 @@ jobs:
       - run: yarn install --immutable
       - run: yarn lint
       - run: yarn test
-      - run: yarn build
-      - run: yarn lerna publish from-package --yes
+      - run: yarn lerna:publish --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

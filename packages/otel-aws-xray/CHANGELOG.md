@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/wheatstalk/tools/compare/@wheatstalk/otel-aws-xray@0.2.0...@wheatstalk/otel-aws-xray@0.2.1) (2023-06-11)
+
+### Bug Fixes
+
+- correct getting attributes from resources ([6973f3e](https://github.com/wheatstalk/tools/commit/6973f3e0e5b48d6e4325b0ff14237f289e2ef9eb))
+
 # [0.2.0](https://github.com/wheatstalk/tools/compare/@wheatstalk/otel-aws-xray@0.1.5...@wheatstalk/otel-aws-xray@0.2.0) (2023-06-11)
 
 ### Features

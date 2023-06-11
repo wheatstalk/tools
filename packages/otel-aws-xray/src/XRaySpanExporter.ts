@@ -73,31 +73,32 @@ export enum ExportResultCode {
 }
 
 function mapSpanToXRayDocument(span: ReadableSpan) {
-  const out = {
-    trace_id: XRayIdGenerator.unpackTraceId(span.spanContext().traceId),
-    id: span.spanContext().spanId,
-    name: span.name,
-    start_time: span.startTime[0],
-    end_time: span.endTime[0],
-    annotations: {} as Record<string, AttributeValue>, // These are indexed by X-Ray
-    metadata: {} as Record<string, AttributeValue>, // These are extra metadata attached to the span
-  } as const;
+  const annotations: Record<string, AttributeValue> = {};
+  const metadata: Record<string, AttributeValue> = {};
 
   // Populate the resource attributes as annotations
   for (const [key, value] of Object.entries(span.resource)) {
     if (!value) continue;
-    out.annotations[key] = value;
+    annotations[key] = value;
   }
 
   // Populate the span attributes as annotations or metadata
   for (const [key, value] of Object.entries(span.attributes)) {
     if (!value) continue;
     if (key.startsWith('annotation:')) {
-      out.annotations[key.slice(11)] = value;
+      annotations[key.slice(11)] = value;
     } else {
-      out.metadata[key] = value;
+      metadata[key] = value;
     }
   }
 
-  return out;
+  return {
+    trace_id: XRayIdGenerator.unpackTraceId(span.spanContext().traceId),
+    id: span.spanContext().spanId,
+    name: span.name,
+    start_time: span.startTime[0],
+    end_time: span.endTime[0],
+    annotations, // These are indexed by X-Ray
+    metadata, // These are extra metadata attached to the span
+  };
 }

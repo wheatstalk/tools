@@ -25,7 +25,8 @@
     "@aws-sdk/client-xray": "3.0.0",
     "@opentelemetry/api": "1.3.0",
     "@opentelemetry/resources": "1.0.0",
-    "@opentelemetry/sdk-trace-node": "1.8.0"
+    "@opentelemetry/sdk-trace-node": "1.8.0",
+    "typescript": "^5.1.3"
   },
   "gitHead": "71060ddca710f1dbf34aaa5f889062ffe7601d4a"
 }

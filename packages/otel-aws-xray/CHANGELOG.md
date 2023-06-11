@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/wheatstalk/tools/compare/@wheatstalk/otel-aws-xray@0.1.3...@wheatstalk/otel-aws-xray@0.1.4) (2023-06-11)
+
+### Bug Fixes
+
+- proper exports ([188c55b](https://github.com/wheatstalk/tools/commit/188c55ba7c41e4211bf5d5f91ae29c738a332c4e))
+
 ## [0.1.3](https://github.com/wheatstalk/tools/compare/@wheatstalk/otel-aws-xray@0.1.2...@wheatstalk/otel-aws-xray@0.1.3) (2023-06-11)
 
 ### Bug Fixes

@@ -103,6 +103,7 @@ function mapSpanToXRayDocument(span: ReadableSpan) {
   return {
     trace_id: XRayIdGenerator.unpackTraceId(span.spanContext().traceId),
     id: span.spanContext().spanId,
+    parent_id: span.parentSpanId,
     name: span.name,
     start_time: span.startTime[0],
     end_time: span.endTime[0],

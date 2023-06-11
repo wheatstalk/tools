@@ -37,10 +37,6 @@ describe('XRaySpanExporter', () => {
 
       await tracer.startActiveSpan('test child', async (span) => {
         await new Promise((resolve) => setTimeout(resolve, 500));
-        const res = await fetch('https://www.example.com');
-        if (!res.ok) {
-          throw new Error('not ok');
-        }
         span.end();
       });
 

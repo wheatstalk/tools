@@ -9,6 +9,7 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "lerna run build --stream",
     "lint": "eslint --ext .ts packages",
     "test": "vitest packages",
     "verdaccio": "verdaccio --config verdaccio.yaml"

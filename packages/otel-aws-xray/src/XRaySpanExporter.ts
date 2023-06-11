@@ -83,6 +83,13 @@ function mapSpanToXRayDocument(span: ReadableSpan) {
     metadata: {} as Record<string, AttributeValue>, // These are extra metadata attached to the span
   } as const;
 
+  // Populate the resource attributes as annotations
+  for (const [key, value] of Object.entries(span.resource)) {
+    if (!value) continue;
+    out.annotations[key] = value;
+  }
+
+  // Populate the span attributes as annotations or metadata
   for (const [key, value] of Object.entries(span.attributes)) {
     if (!value) continue;
     if (key.startsWith('annotation:')) {

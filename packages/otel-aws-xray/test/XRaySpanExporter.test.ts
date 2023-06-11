@@ -17,6 +17,7 @@ describe('XRaySpanExporter', () => {
       .mockImplementation(async () => ({
         UnprocessedTraceSegments: [],
       }));
+
     const provider = new NodeTracerProvider({
       resource: new Resource({
         service: 'XRaySpanExporter.test.ts',

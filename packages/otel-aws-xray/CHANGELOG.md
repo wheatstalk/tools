@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/wheatstalk/tools/compare/@wheatstalk/otel-aws-xray@0.1.5...@wheatstalk/otel-aws-xray@0.2.0) (2023-06-11)
+
+### Features
+
+- support parent span ([b0fe3e1](https://github.com/wheatstalk/tools/commit/b0fe3e1e886830258db2d96bd8b4fd561da94ea1))
+
 ## [0.1.5](https://github.com/wheatstalk/tools/compare/@wheatstalk/otel-aws-xray@0.1.4...@wheatstalk/otel-aws-xray@0.1.5) (2023-06-11)
 
 ### Bug Fixes

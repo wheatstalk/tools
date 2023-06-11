@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "moduleResolution": "Node16",
+    "lib": [
+      "ES2019",
+      "dom"
+    ],
+    "strict": true,
+  }
+}

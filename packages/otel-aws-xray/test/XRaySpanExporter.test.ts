@@ -25,6 +25,8 @@ describe('XRaySpanExporter', () => {
     });
 
     const xRaySpanExporter = new XRaySpanExporter({ xRayClient });
+    const exportSpy = vi.spyOn(xRaySpanExporter, 'export');
+
     provider.addSpanProcessor(new SimpleSpanProcessor(xRaySpanExporter));
     provider.register();
 
@@ -65,6 +67,16 @@ describe('XRaySpanExporter', () => {
           ]),
         },
       }),
+    );
+    // 'test child' span should have a parent span id
+    expect(exportSpy).toHaveBeenCalledWith(
+      [
+        expect.objectContaining({
+          name: 'test child',
+          parentSpanId: expect.stringMatching(/^[0-9a-f]{16}$/),
+        }),
+      ],
+      expect.any(Function),
     );
   });
 });

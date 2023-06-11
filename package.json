@@ -26,5 +26,6 @@
     "prettier": "^2.8.8",
     "verdaccio": "^5.25.0",
     "vitest": "^0.32.0"
-  }
+  },
+  "packageManager": "yarn@3.6.0"
 }

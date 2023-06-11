@@ -1,7 +1,7 @@
 import type { XRayClient } from '@aws-sdk/client-xray';
 import { PutTraceSegmentsCommand } from '@aws-sdk/client-xray';
-import type { AttributeValue } from '@opentelemetry/api';
 import type { SpanExporter } from '@opentelemetry/sdk-trace-base';
+import type { AttributeValue } from '@opentelemetry/api';
 import type { ReadableSpan } from '@opentelemetry/sdk-trace-node';
 
 import { XRayIdGenerator } from './XRayIdGenerator.js';

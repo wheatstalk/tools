@@ -1,5 +1,6 @@
-import type { IdGenerator } from '@opentelemetry/sdk-trace-node';
 import { randomBytes } from 'crypto';
+
+import type { IdGenerator } from '@opentelemetry/sdk-trace-node';
 
 /**
  * Generate trace and span IDs for X-Ray.

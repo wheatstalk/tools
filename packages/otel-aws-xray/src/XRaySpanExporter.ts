@@ -62,12 +62,20 @@ export class XRaySpanExporter implements SpanExporter {
   }
 }
 
-export interface ExportResult {
+/**
+ * The result of an export operation.
+ * Note: The base library fails to export this type.
+ */
+interface ExportResult {
   code: ExportResultCode;
   error?: Error;
 }
 
-export enum ExportResultCode {
+/**
+ * The result code of an export operation.
+ * Note: The base library fails to export this type.
+ */
+enum ExportResultCode {
   SUCCESS = 0,
   FAILED = 1,
 }

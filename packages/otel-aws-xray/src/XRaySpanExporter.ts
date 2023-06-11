@@ -79,10 +79,8 @@ function mapSpanToXRayDocument(span: ReadableSpan) {
     name: span.name,
     start_time: span.startTime[0],
     end_time: span.endTime[0],
-    annotations: {
-      ...span.resource.attributes,
-    } as Record<string, AttributeValue>,
-    metadata: {} as Record<string, AttributeValue>,
+    annotations: {} as Record<string, AttributeValue>, // These are indexed by X-Ray
+    metadata: {} as Record<string, AttributeValue>, // These are extra metadata attached to the span
   } as const;
 
   for (const [key, value] of Object.entries(span.attributes)) {

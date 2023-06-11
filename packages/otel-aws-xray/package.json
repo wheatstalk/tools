@@ -26,5 +26,6 @@
     "@opentelemetry/api": "1.1.0",
     "@opentelemetry/resources": "1.0.0",
     "@opentelemetry/sdk-trace-node": "1.8.0"
-  }
+  },
+  "gitHead": "71060ddca710f1dbf34aaa5f889062ffe7601d4a"
 }

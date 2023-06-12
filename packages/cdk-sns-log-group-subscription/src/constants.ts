@@ -1,0 +1,1 @@
+export const ENV_LOG_GROUP_NAME = 'LOG_GROUP_NAME';

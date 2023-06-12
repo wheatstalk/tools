@@ -3,7 +3,7 @@
   "description": "An AWS CDK Construct that subscribes a CloudWatch LogGroup to an SNS Topic",
   "author": "Josh Kellendonk",
   "license": "Apache-2.0",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

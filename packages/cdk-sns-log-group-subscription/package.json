@@ -1,9 +1,13 @@
 {
   "name": "@wheatstalk/cdk-sns-log-group-subscription",
   "description": "An AWS CDK Construct that subscribes a CloudWatch LogGroup to an SNS Topic",
-  "author": "Josh Kellendonk",
+  "author": "Josh Kellendonk <joshkellendonk@gmail.com>",
   "license": "Apache-2.0",
   "version": "0.0.12",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wheatstalk/tools.git"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
